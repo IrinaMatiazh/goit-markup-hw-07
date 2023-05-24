@@ -166,10 +166,11 @@ img {
 .header-nav-link:focus {
   color: var(--color-ocean);
 }
-
+.current-page {
+  color: var(--color-ocean);
+}
 .current-page::after {
-  position:relative;
-  color: var(--color-ocean)
+  position: relative;
   bottom: 0;
   display: block;
   content: "";
@@ -183,8 +184,6 @@ img {
 .link {
   text-decoration: none;
   display: block;
-  
-  
 }
 a {
   font-style: normal;
@@ -496,7 +495,6 @@ ul.icon-card-footer {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
- 
 }
 
 .backdrop {
