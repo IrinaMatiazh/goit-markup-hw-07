@@ -1000,7 +1000,7 @@ ul.icon-card-footer {
 .icon-customers-border:focus .customer-icon {
   fill: var(--color-ocean);
 }
- /* Mobile */
+ /* Mobile menu */
 
  .menu-toggle {
   min-height: 24px;
@@ -1016,4 +1016,13 @@ ul.icon-card-footer {
   border: none;
   border-radius: 50%;
   outline: none;
+}
+@media only screen and (min-width: 768px) {
+    .menu-toggle { display: none;
+    
+  }
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
