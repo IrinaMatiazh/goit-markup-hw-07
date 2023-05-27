@@ -1026,3 +1026,112 @@ ul.icon-card-footer {
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+.menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--anim-duration);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  background-color: var(--color-white);
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 284px;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu-link {
+  display: block;
+  font-size: 36px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--color-grey);
+  text-decoration: none;
+}
+
+.mobile-current-link {
+  color: var(--color-ocean);
+}
+
+.mobile-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.mobile-contacts-phone {
+  font-size: 36px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: var(--color-iris);
+}
+
+.mobile-contacts-mail {
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--color-slate);
+}
+
+.mobile-socials {
+  display: flex;
+  gap: 56px;
+}
+
+@media screen and (max-width: 400px) {
+  .mobile-socials {
+    gap: 30px;
+  }
+}
