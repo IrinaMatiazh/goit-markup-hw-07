@@ -48,17 +48,31 @@
         <address class="address">
           <ul class="list list-contacts">
             <li>
-              <a class="contact link" href="info@devstudio.com"
+              <a class="link contact link contacts-link-tablet" href="info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
-              <a class="contact link" href="tel:+110001111111"
+              <a class="link contact link contacts-link-tablet" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+         <button
+          type ="button"
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="header-hamburger"
+            width="32"
+            height="22"
+            stroke="#2E2F42"
+          >
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
       </div>
     </header>
 
@@ -137,28 +151,52 @@
           <h2 class="work-title">What are we doing</h2>
           <ul class="work-list-container list">
             <li class="work-item-container">
-              <img
+              <picture>
+                <source
+                srcset="
+                ./images/what-we-do/wp-1.jpg,
+                ./images/what-we-do/wp-2x-1.jpg"
+                 type="image/jpg"/>
+                 <img
                 class="work-img"
                 src="./images/what-we-do/wp-1.jpg"
                 alt="website"
                 width="360"
               />
+              </picture>
+              
             </li>
             <li class="work-item-container">
-              <img
+              <picture>
+                <source
+                srcset="
+                ./images/what-we-do/wp-2.jpg,
+                ./images/what-we-do/wp-2x-2.jpg"
+                type="image/jpg"/>
+                <img
                 class="work-img"
                 src="./images/what-we-do/wp-2.jpg"
                 alt="desing"
                 width="360"
-              />
+                 />
+              </picture>
+      
             </li>
             <li class="work-item-container">
-              <img
+              <picture>
+                <source
+                srcset="
+                ./images/what-we-do/wp-3.jpg,
+                ./images/what-we-do/wp-2x-3.jpg"
+                type="image/jpg"/>
+                <img
                 class="work-img"
                 src="./images/what-we-do/wp-3.jpg"
                 alt="application"
                 width="360"
               />
+              </picture>
+              
             </li>
           </ul>
         </div>
