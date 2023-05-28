@@ -17,12 +17,17 @@
   --anim-duration: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--primary-font), sans-serif;
   color: var(--color-slate);
   background-color: var(--color-white);
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 400;
   letter-spacing: 0.02em;
   text-decoration: none;
 }
@@ -95,9 +100,9 @@ img {
 }
 
 .sub-title {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
   letter-spacing: 0.02em;
 
   color: var(--dark-mode-color);
@@ -221,6 +226,14 @@ a {
 .contact:hover,
 .contact:focus {
   color: var(--color-ocean);
+}
+
+.header-hamburger {
+  display: flex;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
 }
 
 /* Portfolio */
@@ -725,9 +738,8 @@ ul.icon-card-footer {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
-  max-width: 1440px;
-  height: 600px;
+    url();
+  /* max-width: 1440px; */
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -736,7 +748,17 @@ ul.icon-card-footer {
 }
 
 .hero-section {
-  padding: 188px 0;
+  padding: 112px 0;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero-section {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url();
+      background-size: cover;
+  } 
 }
 
 .hero-title {
