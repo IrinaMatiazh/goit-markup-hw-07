@@ -62,11 +62,24 @@ img {
 /* Components */
 
 .container {
-  max-width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 428px) {
+  .container {
+    width: 428px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
 }
 
 .link {
@@ -104,7 +117,7 @@ img {
   font-size: 36px;
   line-height: 40px;
   letter-spacing: 0.02em;
-
+  text-align: center;
   color: var(--dark-mode-color);
 
   margin-bottom: 8px;
@@ -173,7 +186,6 @@ img {
 }
 .current-page::after {
   position: relative;
-  bottom: 0;
   display: block;
   content: "";
   bottom: -1px;
@@ -732,8 +744,8 @@ ul.icon-card-footer {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("/images/people-office.jpg");
-  /* max-width: 1440px; */
+    url("../images/people-office.jpg");
+  max-width: 1440px;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -753,14 +765,14 @@ ul.icon-card-footer {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/images/people-office.jpg");
+      url("../images/people-office-2x.jpg");
     background-size: cover;
   }
 }
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
@@ -822,11 +834,11 @@ ul.icon-card-footer {
 }
 
 .advantages-item-container {
-  text-align: center;
+  text-align: left;
 }
 
 .advantages-desc {
-  font-family: inherit;
+  font-weight: 500;
 }
 
 .icon-advantages-background {
@@ -991,10 +1003,9 @@ ul.icon-card-footer {
   color: var(--color-navy-blue);
 }
 .customer-icon-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 16px;
-  row-gap: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px 16px;
   list-style: none;
   align-items: center;
   justify-content: center;
@@ -1005,7 +1016,7 @@ ul.icon-card-footer {
 .customers-list {
   display: flex;
   gap: 24px;
-
+  width: 190px;
   height: 88px;
 }
 .icon-customers-border {
@@ -1072,11 +1083,13 @@ ul.icon-card-footer {
 }
 
 .menu-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 40px;
   background-color: var(--color-white);
   z-index: 999;
@@ -1099,9 +1112,7 @@ ul.icon-card-footer {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-top: 40px;
-  padding-bottom: 100px;
-  margin: 0;
+  margin-bottom: auto;
   list-style: none;
 }
 
@@ -1155,16 +1166,22 @@ ul.icon-card-footer {
 
 .mobile-socials {
   display: flex;
-  gap: 56px;
+  gap: 30px;
 }
 
 .work-section {
   display: none;
 }
-@media screen and (max-width: 428px) {
+@media screen and (min-width: 428px) {
+  .mobile-socials {
+    gap: 56px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+  }
   .modal {
     width: 408px;
   }
@@ -1174,11 +1191,14 @@ ul.icon-card-footer {
   .nav-list {
     display: flex;
     gap: 40px;
-    margin-right: 180px;
+    margin-right: 120px;
   }
   .nav-container {
     width: 100%;
     justify-content: space-between;
+  }
+  .current-page::after {
+    bottom: -25px;
   }
   .header-container {
     padding-top: 0;
@@ -1188,6 +1208,9 @@ ul.icon-card-footer {
     display: flex;
     font-style: normal;
     margin-left: auto;
+  }
+  .sub-title {
+    text-align: left;
   }
   .list-contacts {
     font-family: "Roboto";
@@ -1199,8 +1222,11 @@ ul.icon-card-footer {
     color: var(--color-slate);
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 12px;
     flex-direction: column;
+  }
+  .contact {
+    font-size: 12px;
   }
   .menu-toggle {
     display: none;
@@ -1215,18 +1241,22 @@ ul.icon-card-footer {
   .team-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
-    width: 600px;
+    gap: 72px 24px;
     margin: 0 auto;
   }
   .customer-icon-list {
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 72px 24px;
+  }
+  .customers-list {
+    width: 168px;
   }
   .foo-container {
-    width: 60%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    max-width: 550px;
+    gap: 72px 24px;
   }
   .footer-container {
     align-items: start;
@@ -1243,7 +1273,7 @@ ul.icon-card-footer {
     width: auto;
   }
   .footer-subscribe-input {
-    width: 355px;
+    width: 264px;
   }
 }
 
@@ -1264,13 +1294,23 @@ ul.icon-card-footer {
     gap: 40px;
     width: 100%;
   }
-
+  .contact {
+    font-size: 16px;
+  }
+  .hero-section {
+    padding: 188px 0;
+    height: 600px;
+  }
   .advantages-section {
     padding: 120px 0;
+  }
+  .advantages-desc {
+    font-weight: initial;
   }
   .advantages-list-container {
     display: flex;
     flex-direction: row;
+    gap: 24px;
   }
   .icon-advantages-background {
     background-color: var(--color-cloud);
@@ -1282,7 +1322,7 @@ ul.icon-card-footer {
     margin-bottom: 8px;
   }
   .advantages-item-container {
-    width: calc((100% - var(--grid-gap) * 3) / 4);
+    width: 264px;
   }
   .work-list-container {
     flex-direction: row;
@@ -1299,7 +1339,13 @@ ul.icon-card-footer {
     gap: 24px;
     width: auto;
   }
-
+  .sub-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .work-section {
+    margin-bottom: 120px;
+  }
   .icon-card {
     display: flex;
   }
@@ -1309,21 +1355,19 @@ ul.icon-card-footer {
   .customers-section {
     padding: 120px 0;
   }
-  .customers-list {
-    display: flex;
-  }
   .customer-icon-list {
     display: flex;
   }
   .customers-list {
-    width: calc((100% - 120px) / 6);
+    display: flex;
+    width: 168px;
   }
   .foo-container {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: baseline;
-    gap: 24px;
-    width: auto;
+    gap: 0;
+    max-width: initial;
   }
   .footer-container {
     align-items: baseline;
